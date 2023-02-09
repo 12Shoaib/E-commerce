@@ -1,0 +1,67 @@
+.mainComponent{
+    display: flex;
+    background-color: black;
+    color: white;
+    height: 24rem;
+}
+.leftSection{
+    flex:1;
+    padding-left: 1rem;
+}
+.rightSection{
+    flex: 1;
+
+}
+.middleSection{
+    flex: 1;
+}
+.extra{
+    flex: 0.5;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 1rem;    
+}
+.links{
+    text-decoration: none;
+    color: white;
+}
+.icons{
+    padding-right: 0.5rem;
+    font-size: 1.2rem;
+}
+.subscribeButton{
+    padding: 0.6rem;
+    width:8rem;
+    background-color: #2c1132;
+    color: white;
+    font-weight: bold;
+    border: 0.01rem white solid;
+    outline:none;
+    cursor: pointer;
+}
+.inputBox{
+    padding: 0.4rem;
+    background-color: black;
+    outline: none;
+    color: white;
+    border: 0px solid white;
+    border-bottom: 0.1rem white solid;   
+    font-size: 1rem; 
+    width: 10rem;
+
+}
+.imageDownloads{
+    width: 6rem;
+    height: 2rem;
+    padding-right: 0.6rem;
+}
+.paymentImg{
+    width: 15rem;
+    height: 1.5rem;
+}
+.bottom{
+    margin-top: 3.5rem ;
+}

@@ -1,0 +1,95 @@
+.navbar{
+    background-color: black;
+    color: white;
+    height:4rem;
+    width: 78.7rem;
+    padding: 0px;
+    margin: 0px;
+    }
+    .navHeading{
+        padding: 0px;
+        margin: 0px;
+        color: antiquewhite;
+    }
+    .tittle{
+        text-decoration: none;
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+        padding-top: 0.8rem;
+    }
+    .links{
+        padding-top: 1rem;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    /* .links:hover{
+        background-color: #703a7c;
+    } */
+    .Icon{
+        font-size: 1.9rem;
+        font-weight: bold;
+    }
+    .designText{
+        font-size: 0.7rem;
+
+    }
+    .bottom{
+        display: flex;
+        padding: 0px;
+        margin: 0px;
+        border-bottom: 0.01rem solid black;
+        height: 2.5rem;
+        background-color: white;
+        color: black;
+        padding-top: 0.7rem;
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+    }
+    .searchBar{
+        width: 25rem;
+        height: 2rem;
+        cursor:text;
+        color: black;
+        outline: none;
+    }
+    .searchIcon{
+        font-size: 1.4rem;
+        padding-right: 0.9rem;
+        padding-left: 0.9rem;
+        padding: 0.5rem;
+        background-color: black;
+        color: white;
+        margin-left: 0.06rem;
+        cursor: pointer;        
+    }
+    .LikeIcon{
+        font-size: 1.4rem;
+        padding: 0.47rem;
+        padding-right: 0.9rem;
+        padding-left: 0.9rem;
+        background-color: white;
+        color: black;
+        margin-left: 2rem;
+    }
+    .itemCount{
+        color: red;
+    }
+    .search{
+        display: flex;
+
+    }
+    .login{
+        text-decoration: none;
+        color: black;
+        display:none;
+    }
+    .name{
+        color: rgb(247, 209, 162);
+        letter-spacing: 0.02rem;
+    }

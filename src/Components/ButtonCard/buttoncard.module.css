@@ -1,0 +1,17 @@
+.mainComponent{
+    display: flex;
+    margin-top:2rem ;
+}
+.image_Left{
+    flex: 1;
+    height: 10rem;
+}
+.image_Right{
+    flex: 1;
+    height: 10rem;
+
+}
+.image{
+    width: 45rem;
+    height: 20rem;
+}
