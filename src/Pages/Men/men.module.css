@@ -60,6 +60,7 @@
     color: white;
     padding: 0px;
     margin: 0px;
+    padding: 2px 2px;
 }
 .buttonWrapper{
     display: flex;

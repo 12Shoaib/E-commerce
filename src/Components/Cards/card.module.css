@@ -53,14 +53,16 @@
     height: 1.9rem;
     border: 0.01rem solid white;
     border-radius: 1rem;
+    
 }
 .button:hover{
     background-color:  #514454;
 }
 .heartIcon{
     color: white;
-    padding: 0px;
+    padding: 2px 2px;
     margin: 0px;
+
 }
 .buttonWrapper{
     display: flex;

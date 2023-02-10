@@ -2,6 +2,7 @@ import dropdown from './dropdown.module.css'
 import {IoIosArrowDropdownCircle} from 'react-icons/io'
 import { useNavigate } from 'react-router-dom'
 import {useState} from 'react';
+import {Link} from 'react-router-dom'
 
 const Dropdown = () => {
         const [userInput , setUserInput] = useState('')
@@ -27,16 +28,18 @@ const Dropdown = () => {
     }    
     return (
         <div className={dropdown.mainComponent}>
-         <div  className={dropdown.dropdown}>
-         {/* <span className={dropdown.Dropdown}>All Categories<IoIosArrowDropdownCircle/></span> */}
-        <select onChange={captureInput} className={dropdown.Dropdown}>
-            <option>No Filter</option>
-            <option>All Categories<IoIosArrowDropdownCircle/></option>
-            <option > Male</option>
-            <option>Female</option>
-            <option>unisex</option>
-        </select>
-         </div>   
+        <div class={dropdown.dropdown}>
+        <button class={dropdown.dropbtn}>FILTER ITEMS <IoIosArrowDropdownCircle /></button>
+        <div class={dropdown.dropdowncontent}>
+            <a href="#">All Categories</a>
+            <Link to='/men'>Male</Link>
+            <Link to='/women'>Female</Link>
+            <Link to='/unisex'>Unisex</Link>
+            <p className={dropdown.tag}><Link to='/'>No Filters</Link></p>
+
+        </div>
+        </div>
+
 
         </div>
     )
