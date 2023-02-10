@@ -2,11 +2,12 @@ import { useState } from "react"
 import signin from './signin.module.css'
 import {isValidemail,isValidPassword} from '../../Helper/validations'
 import {BiErrorAlt} from 'react-icons/bi'
-import {userCredentials, logInUser} from '../../Recoil/RecoilAtom'
+import {userCredentials, logInUser, isLogin} from '../../Recoil/RecoilAtom'
 import {useRecoilValue , useRecoilState} from 'recoil'
 import {isDialogBox} from '../../Recoil/RecoilAtom'
 
 const Signin = () => {
+        const [isLogIn , setIsLogIn] = useRecoilState(isLogin)
         const [presentUser , setPresentUser] = useRecoilState(logInUser)
         const [isDialog, setIsDialog ]= useRecoilState(isDialogBox)
         const [emailCapture , setEmailCapture] = useState('')
@@ -38,6 +39,7 @@ const Signin = () => {
         const detail = userDetails.filter((element) => element.email === emailCapture)
         if(detail.length > 0 && emailCapture === detail[0].email && passwordCapture=== detail[0].password){
                 alert("loginSuccessfull")
+                setIsLogIn(true)
                 setIsDialog(false)
                 setPresentUser([...detail])
             } else if(detail.length === 0){

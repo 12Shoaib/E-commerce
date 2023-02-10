@@ -12,6 +12,10 @@ export const logInUser = atom({
     key:'presentUser',
     default:[]
 })
+export const isLogin = atom({
+    key:'log in key',
+    default:false
+})
 
 export const userCredentials = atom({
     key:'userDetails',
@@ -175,7 +179,7 @@ export const mens = atom({
         },
         {
             brandName: 'Armani',
-            tshirt : 'Mens White Custom Text Graphic Printed T-shirt',
+            tshirt : 'Mens White Custom Text Printed T-shirt',
             price: '$161',
             image:'https://images.bewakoof.com/t640/men-s-black-customizable-oversized-fit-t-shirt-504365-1667496998-1.jpg',
             cart: 'Add To Cart',

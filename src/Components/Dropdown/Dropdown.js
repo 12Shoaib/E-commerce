@@ -32,9 +32,9 @@ const Dropdown = () => {
         <button class={dropdown.dropbtn}>FILTER ITEMS <IoIosArrowDropdownCircle /></button>
         <div class={dropdown.dropdowncontent}>
             <a href="#">All Categories</a>
-            <Link to='/men'>Male</Link>
-            <Link to='/women'>Female</Link>
-            <Link to='/unisex'>Unisex</Link>
+            <Link to='/men'>Male Clothes</Link>
+            <Link to='/women'>Female Clothes</Link>
+            <Link to='/unisex'>Unisex Clothes</Link>
             <p className={dropdown.tag}><Link to='/'>No Filters</Link></p>
 
         </div>

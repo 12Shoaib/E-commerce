@@ -1,10 +1,10 @@
 import Dialog from '../../Components/Dialog/Dialog'
 import home from './home.module.css'
-import { isDialogBox , homeCarousel,searchInput, unfilteredItems,cartDetails,favoriteDetails } from '../../Recoil/RecoilAtom'
+import { isDialogBox , homeCarousel,searchInput, unfilteredItems,cartDetails,favoriteDetails, isLogin } from '../../Recoil/RecoilAtom'
 import { useRecoilState, useRecoilValue } from 'recoil'
 import { useEffect } from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
-import Carousel, { Item } from 'better-react-carousel'
+import Carousel from 'better-react-carousel'
 import ButtonCard from '../../Components/ButtonCard/ButtonCard'
 import Footer from '../../Components/Footer/Footer'
 import Card from '../../Components/Cards/Card'
@@ -22,17 +22,20 @@ const Home = () => {
     const navigate = useNavigate()
     const [cartData , setCartData] = useRecoilState(cartDetails)
     const [isFavorite , setIsFavorite] = useRecoilState(favoriteDetails)
+    const isUserLoggedInStatus = useRecoilValue(isLogin)
     let cart = useRef([])
     let favorite = useRef([])
 
-    useEffect(() => {
-        console.log('The useeffect is running')
+ useEffect(() => {
+    if(!isUserLoggedInStatus){
      const dialogTimeOut = setTimeout(() => {
         setIsDialog(true)
         console.log(isDialog)
-     } , 5000)
+     } , 2000)
      return (()=> clearTimeout(dialogTimeOut))
-    } ,[]);
+    }     
+    },[]);
+
 
     function closeDialog(){
         setIsDialog(false)
@@ -68,6 +71,7 @@ const Home = () => {
           setIsFavorite([...favorite.current]) 
       }
     return (
+        
         <>
         {showSearch ? 
          <>
@@ -78,7 +82,7 @@ const Home = () => {
                 {isDialog &&  <Dialog onClick={closeDialog} /> }
         </div>
         <div className={home.searchResults}>
-        {details.map((element , index) => <div className={home.container}><img src={element.image} className={home.image} />
+        {filteredItems.map((element , index) => <div className={home.container}><img src={element.image} className={home.image} />
             <p className={home.text1}>{element.brandName}</p>
             <p className={home.text}>{element.tshirt}</p>
             <p className={home.text2}>Price - {element.price}</p>
