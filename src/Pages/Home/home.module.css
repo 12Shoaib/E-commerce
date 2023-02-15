@@ -70,6 +70,8 @@
     border-radius: 1rem;
     box-shadow: 20px 20px 50px #e1dfdf, 
             -19px -19px 50px #e1dfdf;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
 }
 .cartButton{
     background-color: #2c1132;

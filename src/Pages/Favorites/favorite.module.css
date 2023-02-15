@@ -92,3 +92,9 @@
     padding: 0.4rem;
 
 }
+.heading{
+    margin-left: 26rem;
+    margin-top: 10rem;
+    border: 0.01rem solid black;
+    padding: 1rem ;
+}

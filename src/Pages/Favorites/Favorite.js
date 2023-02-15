@@ -27,6 +27,8 @@ const Favorite = () => {
     return (
         <div className={favorite.mainComponent}>
             <Navbar />
+           {favorites.length > 0 ? 
+           <>
             {favorites.map((element , index) => <div className={favorite.container}><img onClick={()=>handleClick(index)} src={element.image} className={favorite.image} />
             <p className={favorite.text1}>{element.brandName}</p>
             <p className={favorite.text}>{element.tshirt}</p>
@@ -34,7 +36,7 @@ const Favorite = () => {
             <div className={favorite.buttonWrapper}>
             <button onClick={() => handleCartButton(index)} className={favorite.cartButton}>{element.cart}</button></div>
              </div>)}        
-
+             </> : <h2 className={favorite.heading}>No Favorite Added Yet...! </h2>}
         </div>
     )
 }
