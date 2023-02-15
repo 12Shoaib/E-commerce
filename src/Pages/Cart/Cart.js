@@ -1,14 +1,15 @@
 import cart from './cart.module.css';
 import {BsFillBagXFill} from 'react-icons/bs'
 import Navbar from '../../Components/Navbar/Navbar';
-import {cartDetails , logInUser} from '../../Recoil/RecoilAtom'
-import { useRecoilValue } from 'recoil';
+import {cartDetails ,postClick, logInUser} from '../../Recoil/RecoilAtom'
+import { useRecoilValue , useRecoilState  } from 'recoil';
 import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
     const userCart = useRecoilValue(cartDetails)    
     const navigate = useNavigate()
     const userDetails = useRecoilValue(logInUser)
+    const [postClicked , setPostClick] = useRecoilState(postClick)
 
 
     const redirectingHome = () => {
@@ -17,12 +18,16 @@ const Cart = () => {
     function orderPlaced (){
         alert('The order placed successfully and it will be delivered soon')
     }
+    function handleClick(index){
+        navigate('/productdetail')
+        setPostClick(userCart[index])
+        }
 
     return (
         <div className={cart.mainComponent}>
         <Navbar />
         {userCart.length > 0  ? <> 
-        {userCart.map((element , index) => <div className={cart.container}><img src={element.image} className={cart.image} />
+        {userCart.map((element , index) => <div className={cart.container}><img onClick={()=>handleClick(index)} src={element.image} className={cart.image} />
         <p className={cart.text1}>{element.brandName}</p>
             <p className={cart.text}>{element.tshirt}</p>
             <p className={cart.text2}>Price - {element.price}</p>

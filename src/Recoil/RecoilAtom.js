@@ -1,5 +1,10 @@
 import {atom} from 'recoil';
 
+export const postClick = atom({
+    key:'value',
+    default:[]
+})
+
 export const searchInput = atom({
     key:'search',
     default:[]

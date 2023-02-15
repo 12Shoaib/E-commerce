@@ -87,7 +87,7 @@
     .login{
         text-decoration: none;
         color: black;
-        display:none;
+        cursor: pointer
     }
     .name{
         color: rgb(232, 49, 36);

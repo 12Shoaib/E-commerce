@@ -25,7 +25,7 @@ const Footer = () => {
       setAlert("Already Subsribed")
 
     } else{
-    setAlert("Subscription Successfull")
+    setAlert("Thank You For Subscribing..!")
     setData(inputCapture)
 
     }

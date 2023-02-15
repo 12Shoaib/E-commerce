@@ -2,15 +2,19 @@ import men from './men.module.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
 import { useRecoilValue , useRecoilState} from 'recoil'
-import {mens , cartDetails , favoriteDetails} from '../../Recoil/RecoilAtom'
+import {mens , cartDetails ,postClick , favoriteDetails} from '../../Recoil/RecoilAtom'
 import {useRef} from 'react'
-import {AiFillHeart} from 'react-icons/ai'
+import {AiFillHeart} from 'react-icons/ai' 
+import {useNavigate} from 'react-router-dom'
+
 
 
 const Men = () => {
     const MensData = useRecoilValue(mens)
     const [cartData , setCartData] = useRecoilState(cartDetails)
     const [isFavorite , setIsFavorite] = useRecoilState(favoriteDetails)
+    const [postClicked , setPostClick] = useRecoilState(postClick)
+    const navigate = useNavigate()
     let cart = useRef([])
     let favorite = useRef([])
 
@@ -22,13 +26,17 @@ const Men = () => {
         favorite.current.push(MensData[index])   
         setIsFavorite([...favorite.current]) 
     }
+    function handleClick(index){
+        navigate('/productdetail')
+        setPostClick(MensData[index])
+        }
 
   
     return(
         <>
         <div className={men.mainComponent}>
             <Navbar />
-            {MensData.map((element , index) => <div className={men.container}><img src={element.image} className={men.image} />
+            {MensData.map((element , index) => <div className={men.container}><img onClick={()=>handleClick(index)} src={element.image} className={men.image} />
             <p className={men.text1}>{element.brandName}</p>
             <p className={men.text}>{element.tshirt}</p>
             <p className={men.text2}>Price - {element.price}</p>

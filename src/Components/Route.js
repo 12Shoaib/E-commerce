@@ -6,6 +6,7 @@ import Cart from '../Pages/Cart/Cart'
 import Login from '../Pages/LogIn/Login'
 import Unisex from '../Pages/Unisex/Unisex'
 import Favorite from '../Pages/Favorites/Favorite'
+import Clickedpost from './ClickedPost/Clickedpost'
 
 const Routing = () => {
     return(
@@ -17,6 +18,7 @@ const Routing = () => {
         <Route path='/login' element={<Login />} />
         <Route path='/unisex' element={<Unisex/>} />
         <Route path='/favorite' element={<Favorite/>} />
+        <Route path='/productdetail' element={<Clickedpost/>} />
         </Routes>
     )
 }

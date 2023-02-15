@@ -1,0 +1,127 @@
+.image{
+    max-height:30rem ;
+    max-width: 25rem;
+    padding: 0.8rem;
+    padding-left: 1.9rem;
+}
+.container{
+    display: flex;
+}
+.contentWrapper{
+    margin-top: 2rem;
+    padding-left: 1.5rem;
+}
+.text1{
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 0.5rem;
+    text-transform: uppercase
+}
+.text2{
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 0.5rem;
+
+}
+.text3{
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 0.5rem;
+    text-decoration: line-through;
+
+}
+.text4{
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 0.5rem;
+
+}
+.Button{
+    background-color: #2c1132;
+    color: white;
+    width: 13.25rem;
+    height: 1.9rem;
+    font-weight: bold;
+    border: 0.01rem solid black;
+    border-radius: 1rem;
+    margin: 0.5rem;
+
+}
+.Button:hover{
+    background-color:  #514454;
+}
+.Button:active{
+    background-color: #5d1f6b;
+}
+.discont_details{
+    background-color: white;
+}
+.review{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+.star_Icon{
+    font-size: 1.3rem;
+}
+.star_Icon2{
+    font-size: 1.1rem;
+}
+.bottom{
+    border-top: 0.01rem solid rgba(72, 72, 72, 0.253);
+}
+.nameColor{
+    background-color: #2c1132;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 2rem;
+    margin-top: 4px;
+
+}
+.Name{
+    border-top: 0.01rem solid rgba(72, 72, 72, 0.253) ;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    gap:0.7rem;
+    font-weight: 600;
+}
+.description{
+    padding: 0px;
+    margin: 0px;
+    border-bottom: 0.01rem solid rgba(72, 72, 72, 0.253) ;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    padding-left: 2.4rem;
+}
+.button{
+    background-color: #2c1132;
+    color: white;
+    width: 13.25rem;
+    height: 1.9rem;
+    font-weight: bold;
+    border: 0.01rem solid black;
+    border-radius: 1rem;
+    margin: 0.5rem;
+
+}
+.description2{
+    padding: 0px;
+    margin: 0px;
+    padding-left: 2.4rem;
+    color: grey;
+    font-size: 0.9rem;
+}

@@ -1,6 +1,7 @@
 import Dialog from '../../Components/Dialog/Dialog'
 import home from './home.module.css'
-import { isDialogBox , homeCarousel,searchInput, unfilteredItems,cartDetails,favoriteDetails, isLogin } from '../../Recoil/RecoilAtom'
+import { isDialogBox , homeCarousel,searchInput, 
+unfilteredItems,cartDetails,favoriteDetails, isLogin } from '../../Recoil/RecoilAtom'
 import { useRecoilState, useRecoilValue } from 'recoil'
 import { useEffect } from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
@@ -31,7 +32,7 @@ const Home = () => {
      const dialogTimeOut = setTimeout(() => {
         setIsDialog(true)
         console.log(isDialog)
-     } , 2000)
+     } , 8000)
      return (()=> clearTimeout(dialogTimeOut))
     }     
     },[]);
@@ -70,6 +71,7 @@ const Home = () => {
           favorite.current.push(details[index])   
           setIsFavorite([...favorite.current]) 
       }
+     
     return (
         
         <>

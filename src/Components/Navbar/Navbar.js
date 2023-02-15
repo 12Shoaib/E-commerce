@@ -5,7 +5,7 @@ import { GiHadesSymbol } from 'react-icons/gi'
 import Dropdown from '../Dropdown/Dropdown'
 import {BiSearch} from 'react-icons/bi'
 import {BsHeartFill} from 'react-icons/bs'
-import {cartDetails , unisex , logInUser, searchInput } from '../../Recoil/RecoilAtom'
+import {cartDetails , unisex , logInUser, searchInput, isDialogBox } from '../../Recoil/RecoilAtom'
 import {useRecoilValue,useRecoilState} from 'recoil'
 import { useNavigate } from 'react-router-dom'
 
@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router-dom'
 const Navbar = (props) => {
     const cartItems = useRecoilValue(cartDetails)
     const [seachCapture , setSearchCapture] = useRecoilState(searchInput)
+    const [callDialog , setCallDialogue] = useRecoilState(isDialogBox)
     const unisexData = useRecoilValue(unisex)
     const navigate = useNavigate()
     const userDetails = useRecoilValue(logInUser)
@@ -25,7 +26,9 @@ const Navbar = (props) => {
     const navigateFavPage = () => {
         navigate('/favorite')
     }
-
+    const dialogRquest = () => {
+        setCallDialogue(true)
+    }
 
     return (
         <div className={navbar.mainComponent}>
@@ -46,7 +49,7 @@ const Navbar = (props) => {
                 <span className={navbar.search}><input placeholder='search anything...' onChange={capturingInput} className={navbar.searchBar}/> <BiSearch onClick={props.onClick} className={navbar.searchIcon}/></span>
                 <BsHeartFill  className={navbar.LikeIcon} onClick={navigateFavPage} />
                 <h4>Welcome, {userDetails.length > 0 ? <span className={navbar.name}>{userDetails[0].name}</span> : <span>signin now</span>}</h4>
-                <Link className={navbar.login} to='login'><h4>SignUp/SignIn</h4></Link>
+                <h4 className={navbar.login} onClick={dialogRquest}>SignUp/SignIn</h4>
                  </div>
 
         </div>
